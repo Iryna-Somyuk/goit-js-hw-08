@@ -2,12 +2,12 @@
 import { galleryItems } from './gallery-items';
 // Change code below this line
 // Описаний в документації
-import SimpleLightbox from "simplelightbox";
+import SimpleLightbox from 'simplelightbox';
 // Додатковий імпорт стилів
-import "simplelightbox/dist/simple-lightbox.min.css";
+import 'simplelightbox/dist/simple-lightbox.min.css';
 console.log(galleryItems);
 
-const galleryImg = document.querySelector(".gallery");
+const galleryImg = document.querySelector('.gallery');
 
 const markUpGallery = galleryItems.map(
   ({ preview, original, description }) =>
@@ -15,11 +15,11 @@ const markUpGallery = galleryItems.map(
 <img class= "gallery__image" src = "${preview}" 
  alt = "${description}"/></a></div>`
 );
-galleryImg.insertAdjacentHTML("beforeend", markUpGallery.join(""));
+galleryImg.insertAdjacentHTML('beforeend', markUpGallery.join(''));
 
 //console.log(SimpleLightbox);
-new SimpleLightbox(".gallery a", {
+new SimpleLightbox('.gallery a', {
   captionPosition: 'bottom',
-  captionsData: "alt",
+  captionsData: 'alt',
   captionDelay: 250,
 });
